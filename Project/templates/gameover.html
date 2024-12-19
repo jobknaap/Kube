@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='admin-style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kube Admin</title>
+</head>
+<body id="gameover_body">
+    <header>
+    </header>
+    <main>
+        <div class="gameover_container">
+            <h1>GAME OVER!</h1>
+            <img src="../static/images/gameover.gif" alt="Sleeping panda gif">
+            <h2>Hi <span>{{ username }}</span>!<br>You scored <span>{{ points }}</span> points<br>and your rank is <span> {{ rank }}</span></h2>
+            <table>
+                <caption>Leaderboard</caption>
+                <tr>
+                    <th>Rank</th>
+                    <th>Username</th>
+                    <th>Points</th>
+                    <th>Country</th>
+                </tr>
+                {% for row in topTen %}
+                <tr>
+                    {% for data in row %}
+                        <td>{{ data }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

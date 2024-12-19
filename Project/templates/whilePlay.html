@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>play</title>
+  </head>
+  <body>
+    <div class="play-header">
+      <h1>You're playing the {{game}} game</h1>
+    </div>
+    <div class="play-gif-box">
+      <img class="play-gif"src="{{ url_for('static', filename='images/LoadingGame.gif') }}" alt="Loading Game gif">
+    </div>
+  <script>window.location.replace("{{ game }}")</script>
+  </body>
+</html>
+

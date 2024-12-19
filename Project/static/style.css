@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body { /*style van de site tenzij een class of ID */
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #162637;
+  color: white;
+}
+
+.main-container{ /*deze container zorgt voor een minimale breedte*/
+  min-width: 300px;
+}
+
+ /*NAV Begin*/
+.navbar{ /**/
+  margin: 0;
+  height: 20vh;  /*20 procent van de viewport*/
+  background-color: #162637;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.leftNavBox{ /*linker box in nav (1 van de 2)*/
+  height: 100%;
+  width: 50%;
+  background-color: #162637;
+  display: flex;
+  align-items: center;
+}
+
+.rules-icon-box{ /**/
+  height: 30%;
+  width: 30%;
+  margin-left: 8vw;
+  margin-right: auto;
+  color: white;
+}
+.rules-icon-box-leaderboardpage {
+    height: 30%;
+  width: 30%;
+  margin-left: auto;
+  margin-right: 8vw;
+  color: white;
+}
+
+.home-icon-box{ /**/
+  height: 30%;
+  width: 30%;
+  margin-left: 8vw;
+  margin-right: auto;
+  color: white;
+}
+
+.home-icon{ /**/
+  height: 100%;
+  width: 100%;
+  display: block;
+  fill: #ffffff;
+}
+
+.rules-icon{ /**/
+  height: 100%;
+  width: 100%;
+  display: block;
+  fill: #ffffff;
+}
+
+.rightNavBox{ /*Rechter box in nav (1 van de 2)*/
+  height: 100%;
+  width: 50%;
+  background-color: #162637;
+  display: flex;
+  align-items: center;
+}
+
+.tromphy-icon-box{ /**/
+  height: 30%;
+  width: 30%;
+  margin-left: auto;
+  margin-right: 8vw;
+}
+
+.tromphy-icon{ /**/
+  height: 100%;
+  width: 100%;
+  fill: #ffffff;
+}
+
+.center-content{ /**/
+  height: 50vh;
+  padding: 20px;
+  background-color: #162637;
+  display: flex;
+  align-items: center;
+}
+
+.kube-logo{ /**/
+  margin: auto;
+}
+
+.container{
+  position: relative;
+  width: 100%
+}
+
+.login-form{
+  height: auto; /* Or whatever */
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, 25%);
+}
+
+.kube-logo-login{
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.label-input{
+    font-family: monospace;
+    font-size: 40px;
+}
+
+.username-input{
+    width: 100%;  /* Or whatever */
+    height: 80px; /* Or whatever */
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+input::placeholder{
+  font-size: 40px;
+}
+
+select::placeholder{
+  font-size: 40px;
+}
+
+.country-input{
+    width: 100%;  /* Or whatever */
+    height: 80px; /* Or whatever */
+    font-size: 40px;
+}
+
+.speed-button{
+  width: 48%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0);
+  float: left;
+  margin-top: 20px;
+  border-radius: 25px;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+  border: 3px solid #00a57c
+}
+
+.memory-button{
+  width: 48%;
+  height: auto;
+  float: right;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 25px;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+  border: 3px solid #00a57c;
+}
+
+input[type=radio]:checked+label{
+  background-color: #00a57c !important;
+
+}
+
+input[type=radio]{
+  visibility: hidden;
+}
+
+label{
+  display: inline-block;
+}
+
+.submit-button{
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    background-color: #00a57c;
+    border-radius: 25px;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+.footer-section{ /**/
+  height: 30vh;
+  align-items: center;
+}
+
+.play-icon-box{ /**/
+  width: 80%;
+  height: 60%;
+  background-color: #00a57c;
+  display: flex;
+  align-items: center;
+  margin: 100px auto auto auto;
+  border-radius: 50px;
+}
+
+.play-icon{ /**/
+ height: 30%;
+ width: 30%;
+ margin: auto;
+ filter: invert(100%);
+}
+
+/* */
+body {
+    background-color: #162637;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+    height: 1390px ;
+    width: 780px;
+}
+.content-table thead tr {
+    background-color: #00a57c;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th{
+    padding: 12px 15px;
+}
+.content-table td {
+    padding: 20px 12px;
+
+}
+
+.content-table tbody tr  {
+    border-bottom: 5px solid #00a57c ;
+}
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #d3e1f6;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 13px solid #00a57c;
+}
+/* Start whileGame.html */
+.play-header{
+  height: 25vh;
+  padding-top: 100px;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+}
+
+.play-gif-box{
+  height: 60vh;
+}
+
+.play-gif{
+ width: 100%
+}
+/* End whileGame.html */
+/* START gameover page pagina */
+.rules {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.rules > h1{
+    text-align: center;
+    color: #00a57c;
+    margin-bottom: 15px;
+    font-size: 60px;
+    font-family: monospace;
+}
+
+.rules > h2{
+    color: #036d52;
+    margin-bottom: 8px;
+    font-size: 50px;
+    font-family: monospace;
+}
+
+.rules > h3{
+    color: white;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.rules > p{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-family: 'Exo 2',sans-serif;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.rules > ul{
+    margin: 0 0 20px 5%;
+    color: white;
+}
+
+
+.rules > ul > li{
+    list-style-type: disc;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+.rules span{
+    color: #00a57c;
+    font-weight: bolder;
+}
+
+/* END gameover page pagina */
+/* START leaderboard page */
+#leaderboard_body{
+    background-color: #162637;
+    color: white;
+}
+.scrollboard {
+    height: 150px;
+    overflow: scroll;
+}
+
+.leaderboard_container{
+    width: 100%;
+}
+
+.leaderboard_container > table > tbody{
+    display: block;
+    overflow: scroll;
+    height: 500px;
+}
+
+.leaderboard_container > h1{
+    text-align: center;
+    margin: 10px 0;
+    color: #00a57c;
+}
+
+.leaderboard_container > img{
+    height: 250px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.leaderboard_container > h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.leaderboard_container > table{
+    margin: 0 auto 20px;
+}
+
+.leaderboard_container > table > caption{
+    margin-bottom: 10px;
+    font-size: 50px;
+    color: #00a57c;
+    font-family: monospace;
+
+}
+
+.leaderboard_container > table, th, td{
+    border-collapse: collapse;
+    font-size: 40px;
+    padding: 10px 20px;
+    font-family: 'Exo 2',sans-serif;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.leaderboard_container > table th{
+    height: 50px;
+    background-color: #00a57c;
+    color: white;
+    padding: 20px;
+    font-family: monospace;
+
+}
+/* End leaderboard page */
+

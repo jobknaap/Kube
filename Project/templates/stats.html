@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='admin-style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kube Admin</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Admin</h1>
+            <ul>
+                <li><a href="{{ url_for('stats') }}" class="active">Stats</a></li>
+                <li><a href="{{ url_for('sensorTest') }}">Testing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="table_container">
+            <h1>Statistics</h1>
+            <table id="speed">
+                <caption>Speed game</caption>
+                <tr>
+                    <th>Amount of players:</th>
+                    <td>{{ playersS }}</td>
+                </tr>
+                <tr>
+                    <th>Total played time:</th>
+                    <td>{{ totalTimeS }} seconds</td>
+                </tr>
+                <tr>
+                    <th>Average play time:</th>
+                    <td>{{ "%.2f"|format(averageTimeS|float) }} seconds</td>
+                </tr>
+                <tr>
+                    <th>Highscore:</th>
+                    <td>{{ highscoreS }} points</td>
+                </tr>
+                <tr>
+                    <th>Duration longest game:</th>
+                    <td>{{ longestTimeS }} seconds</td>
+                </tr>
+
+            </table>
+
+            <table id="memory">
+                <caption>Memory game</caption>
+                <tr>
+                    <th>Amount of players:</th>
+                    <td>{{ playersM }}</td>
+                </tr>
+                <tr>
+                    <th>Total played time:</th>
+                    <td>{{ totalTimeM }} seconds</td>
+                </tr>
+                <tr>
+                    <th>Average play time:</th>
+                    <td>{{ "%.2f"|format(averageTimeM|float) }} seconds</td>
+                </tr>
+                <tr>
+                    <th>Highscore:</th>
+                    <td>{{ highscoreM }} points</td>
+                </tr>
+                <tr>
+                    <th>Duration longest game:</th>
+                    <td>{{ longestTimeM }} seconds</td>
+                </tr>
+
+            </table>
+
+            <table id="kube">
+                <caption>Kube</caption>
+                <tr>
+                    <th>Average time played overall</th>
+                    <td>{{ "%.2f"|format(averageTime|float) }} seconds</td>
+                </tr>
+                <tr>
+                    <th>Amount of players Kube</th>
+                    <td>{{ players }}</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

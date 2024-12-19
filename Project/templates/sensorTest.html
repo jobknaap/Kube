@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='admin-style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kube Admin</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Admin</h1>
+            <ul>
+                <li><a href="{{ url_for('stats') }}" >Stats</a></li>
+                <li><a href="{{ url_for('sensorTest') }}" class="active">Testing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="sensorTest">
+            <a href="{{ url_for('loadingTest') }}">Test Sensors</a>
+            <table>
+                <caption>Tested Sensors</caption>
+                <tr>
+                    <th>Date tested</th>
+                    <th>Button</th>
+                    <th>LDR</th>
+                    <th>Rotar.</th>
+                    <th>Accel.</th>
+                </tr>
+                {% for row in sensors %}
+                <tr>
+                    {% for data in row %}
+                        {% if data == 1 %}
+                            <td><img src="{{ url_for('static', filename='images/correct.png') }}"></td>
+                        {% elif data == 0 %}
+                            <td><img src="{{ url_for('static', filename='images/fout.png') }}"></td>
+                        {% else %}
+                            <td>{{ data }}</td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </table>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

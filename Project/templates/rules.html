@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+    <title>Kube</title>
+  </head>
+  <body>
+      <div class="main-container">
+        <div class="navbar">
+            <a class="leftNavBox" href="{{ url_for('index') }}">
+              <div class="home-icon-box">
+                  <svg version="1.1" id="Capa_1" class="home-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 463.937 463.937" style="enable-background:new 0 0 463.937 463.937;" xml:space="preserve">
+                <g>
+                    <g>
+                        <path d="M460.414,216.518l-85.6-73.1c0.1-0.5,0.2-1,0.3-1.6v-95.6c-0.1-5.7-4.6-10.3-10.3-10.5h-47.8c-5.5,0-10,4.9-10,10.5v39.6
+                            l-68.5-58.4c-3.7-3.2-9.2-3.2-13,0l-221.9,189c-4.3,3.5-4.8,9.8-1.3,14.1s9.8,4.8,14.1,1.3c0.1-0.1,0.1-0.1,0.2-0.2l215.4-183.4
+                            l77.1,65.7l46.1,39.2l92.3,78.6c4.2,3.6,10.5,3.1,14.1-1.1C465.114,226.418,464.614,220.118,460.414,216.518z M355.014,126.518
+                            l-28-23.6v-47.1h28V126.518z"/>
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <path d="M416.314,236.718l-28.1-24l-149.7-127.9c-3.7-3.2-9.2-3.2-13,0l-149.7,127.9l-28.1,24c-4.2,3.6-4.7,9.9-1.1,14.1
+                            c3.5,4.2,9.7,4.7,13.8,1.2l0.1-0.1l12.5-10.8v187.5c0.1,5.6,4.7,10.2,10.3,10.3h297.3c5.6-0.1,10.2-4.6,10.3-10.3v-187.5
+                            l12.5,10.8c1.8,1.5,4,2.4,6.4,2.4c2.9,0,5.7-1.3,7.6-3.5C421.114,246.518,420.514,240.218,416.314,236.718z M272.014,418.818h-80
+                            v-108h80V418.818z M292.014,418.818v-117.7c0-5.5-4.1-10.3-9.6-10.3h-100.8c-5.5,0-9.6,4.8-9.6,10.3v117.7h-79v-194.8l139-118.4
+                            l139,118.4v194.8H292.014z"/>
+                    </g>
+                </g>
+                  </svg>
+              </div>
+            </a>
+		<a href="{{ url_for('leaderboard') }}" class="rightNavBox">
+              <div class="tromphy-icon-box">
+                <svg viewBox="0 0 512 512" class="tromphy-icon">
+                  <g><path d="m308.165 103.944-26.682-4.018-12.067-24.134c-2.541-5.082-7.734-8.292-13.416-8.292s-10.875 3.21-13.417 8.292l-12.067 24.134-26.681 4.018c-5.618.846-10.276 4.794-12.032 10.198-1.76 5.414-.299 11.344 3.74 15.322l19.224 18.934-4.423 26.617c-.932 5.605 1.384 11.255 5.98 14.594 4.588 3.334 10.676 3.8 15.728 1.178l23.948-12.432 23.947 12.432c5.044 2.618 11.132 2.161 15.728-1.178 4.597-3.339 6.912-8.989 5.98-14.594l-4.423-26.617 19.224-18.934c4.048-3.987 5.496-9.919 3.74-15.322s-6.413-9.352-12.031-10.198zm-37.532 28.544c-7.14 7.032-3.488 15.84-3.489 17.85l-4.233-2.197c-4.332-2.249-9.489-2.249-13.822 0l-4.233 2.197c.387-3.525 1.852-6.905.25-11.809-1.596-4.916-4.775-6.78-7.138-9.388 2.45-.369 4.904-.739 4.802-.724 9.874-1.545 11.905-10.507 13.229-12.377l2.133 4.266c4.482 8.963 13.982 8.21 15.898 8.835z"/><path d="m497 30h-76.19c.122-4.962.19-9.96.19-15 0-8.284-6.716-15-15-15h-300c-8.284 0-15 6.716-15 15 0 5.04.068 10.038.19 15h-76.19c-8.284 0-15 6.716-15 15v37.994c0 83.927 66.614 152.682 150.063 156.808 17.391 23.716 37.88 40.882 60.679 50.685-2.034 40.567-15.714 73.422-27.335 94.443-13.827 25.013-27.898 39.346-28.014 39.463v.001c-2.746 2.745-4.393 6.604-4.393 10.606v47h-15c-8.284 0-15 6.716-15 15s6.716 15 15 15h240c8.284 0 15-6.716 15-15s-6.716-15-15-15h-15v-47c0-3.807-1.523-7.736-4.393-10.606 0 0 0 0 0-.001-.534-.534-51.317-52.252-55.353-133.905 22.802-9.803 43.292-26.969 60.683-50.687 83.449-4.125 150.063-72.88 150.063-156.807v-37.994c0-8.284-6.716-15-15-15zm-467 52.994v-22.994h62.701c3.867 50.117 14.865 102.446 37.371 146.945-57.193-12.68-100.072-63.437-100.072-123.951zm151 399.006v-32h150v32zm100.426-216.085c-6.211 1.989-10.426 7.764-10.426 14.286 0 63.591 25.044 112.199 43.917 139.799h-117.834c18.873-27.6 43.917-76.208 43.917-139.799 0-6.522-4.214-12.297-10.426-14.286-35.569-11.388-60.587-44.451-76.662-78.484-19.916-42.166-31.147-96.341-32.72-157.431h269.617c-1.573 61.09-12.805 115.265-32.722 157.431-15.915 33.694-40.882 67.028-76.661 78.484zm200.574-182.921c0 60.514-42.879 111.271-100.073 123.951 22.506-44.499 33.505-96.827 37.371-146.946h62.702z"/>
+                </g>
+                </svg>
+              </div>
+	</a>
+        </div>
+          <div class="rules">
+            <h1>How to play the Kube</h1>
+
+            <h2>Object of the game!</h2>
+            <p>To object of the game is to keep up with the Kube. The kube tells you to do these 4 commands at random.</p>
+
+            <h2>Game Play</h2>
+            <h3> Smack it!</h3>
+            <p>On the Kube you will find a big red button, once the kube says “Smack” you got to press the button</p>
+            <h3>Twist it!</h3>
+            <p>On the Kube you will find a white twisty knob, once the kube says “Twist” you got to twist the white knob
+                any direction.</p>
+            <h3>Shake it!</h3>
+            <p>Grab the kube tightly, once the kube says “Shake” shake the Kube in any direction.</p>
+            <h3> Cover it!</h3>
+            <p>On the Kube you will find a hand with a hole, once the kube says “Cover” put your hand over
+                the hole to cover it.</p>
+
+            <h2>Get started</h2>
+            <ul>
+                <li>On the homepage you need to click on the play button.</li>
+                <li>On the screen will appear a small form with 2 types of games.</li>
+                <li>Fill in the form and choose wich game to play.</li>
+                <li>Get ready to have fun!</li>
+            </ul>
+
+            <h2>The speed game</h2>
+            <p><span>Players:</span> 1</p>
+            <p><span>Object:</span> Keep up with the Kube and get the highest score.</p>
+            <p><span>Play:</span> Respond in time to the commands you hear. Score 1 point each time you get it right, but if
+                you’re too slow, or get it wrong, the game will end. After you can see in the leader board what your
+                score is and how high you ranked.</p>
+            <p>As you score more points the game will get harder!</p>
+
+            <h2>The memory game</h2>
+            <p><span>Players:</span> 1</p>
+            <p><span>Object:</span> remember the commands you already got and get the highest score.</p>
+            <p><span>Play:</span> The kube will give you the first command. Repeat the command bij using the correct sensor.
+                The kube will duplicate the first command and adds one. Repeat these two commands by using the
+                correct sensor. This will repeat untill you mess up! For each correct iteration you will earn a point.
+                After you can see in the leader board what your score is and how high you ranked.</p>
+        </div>
+
+
+        </div>
+      </div>
+  </body>
+</html>
